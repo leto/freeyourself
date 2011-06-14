@@ -9,3 +9,7 @@ The more possible methods of easily and conveniently donating, the higher the
 chance of getting a donation.
 
 # How To Deploy Your Tip Jar
+
+# Inspiration
+
+This is inspired by http://free.ingy.net
