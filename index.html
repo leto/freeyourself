@@ -3,3 +3,24 @@ layout: default
 title: Free Your Self
 ---
 
+Ways To Donate<br/>
+
+<!-- Amazon Payments -->
+<form action="" method="post">
+<input type="radio" checked="checked" name="payby" value="amazon_x" /><img style="vertical-align: middle" title="Amazon Payments" alt="Amazon Payments" src="http://g-ecx.images-amazon.com/images/G/01/cba/b/p3.gif" /> Use the same account you use when you buy from Amazon
+</form>
+
+<!-- PayPal -->
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="radio" name="payby" value="paypal_x" /><img style="vertical-align: middle" alt="PayPal" title="PayPal" src="https://www.paypal.com/en_US/i/logo/PayPal_mark_60x38.gif" />
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="foo@bar.com">
+<input type="hidden" name="lc" value="CA">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal">
+</form>
+<p />
+
+
