@@ -4,16 +4,19 @@ title: Free Your Self
 email: jonathan@leto.net
 location: Portland, OR
 dwolla_account_id: 812-529-3608
+dwolla_memo: Here is a donation for your valuable work.
+dwolla_amount: 5
+dwolla_repeat_donation: 1
 bitcoin_address: 15pwvXdXo8XxJbQhG41d9xtDmr2UoCXoPP
-paypal_email: jonathan@leto.net
+paypal_email: jaleto@gmail.com
 ---
 
 Ways To Donate<br/>
 
-<!-- Amazon Payments -->
-<form action="" method="post">
-<input type="radio" checked="checked" name="payby" value="amazon_x" /><img style="vertical-align: middle" title="Amazon Payments" alt="Amazon Payments" src="http://g-ecx.images-amazon.com/images/G/01/cba/b/p3.gif" /> Use the same account you use when you buy from Amazon
-</form>
+<a href=”http://www.dwolla.com/u/{{ page.dwolla_account_id }}?amount={{ page.dwolla_amount }}&repeats={{ page.dwolla_repeat_donation }}&repeat=3&action=send”><img title=”Dwolla” src=”http://www.dwolla.org/id/dwolla_170a.png” width=”170″ height=”59″ border=”0″ /></a>
+<br/>
+
+<br />
 
 <!-- PayPal -->
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -26,6 +29,11 @@ Ways To Donate<br/>
 <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal">
 </form>
+
 <p />
 
 
+<!-- Amazon Payments -->
+<form action="" method="post">
+<input type="radio" checked="checked" name="payby" value="amazon_x" /><img style="vertical-align: middle" title="Amazon Payments" alt="Amazon Payments" src="http://g-ecx.images-amazon.com/images/G/01/cba/b/p3.gif" /> Use the same account you use when you buy from Amazon
+</form>
