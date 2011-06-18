@@ -1,6 +1,11 @@
 ---
 layout: default
 title: Free Your Self
+email: jonathan@leto.net
+location: Portland, OR
+dwolla_account_id: 812-529-3608
+bitcoin_address: 15pwvXdXo8XxJbQhG41d9xtDmr2UoCXoPP
+paypal_email: jonathan@leto.net
 ---
 
 Ways To Donate<br/>
@@ -14,7 +19,7 @@ Ways To Donate<br/>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="radio" name="payby" value="paypal_x" /><img style="vertical-align: middle" alt="PayPal" title="PayPal" src="https://www.paypal.com/en_US/i/logo/PayPal_mark_60x38.gif" />
 <input type="hidden" name="cmd" value="_donations">
-<input type="hidden" name="business" value="foo@bar.com">
+<input type="hidden" name="business" value="{{ page.paypal_email }}">
 <input type="hidden" name="lc" value="CA">
 <input type="hidden" name="no_note" value="0">
 <input type="hidden" name="currency_code" value="USD">
