@@ -1,13 +1,18 @@
 ---
 layout: default
 title: Free Your Self
+
+name: Jonathan "Duke" Leto
 email: jonathan@leto.net
 location: Portland, OR
+
 dwolla_account_id: 812-529-3608
 dwolla_memo: Here is a donation for your valuable work.
 dwolla_amount: 5
 dwolla_repeat_donation: 1
+
 bitcoin_address: 15pwvXdXo8XxJbQhG41d9xtDmr2UoCXoPP
+
 paypal_email: jaleto@gmail.com
 ---
 
@@ -24,10 +29,11 @@ Ways To Donate<br/>
 <input type="hidden" name="cmd" value="_donations">
 <input type="hidden" name="business" value="{{ page.paypal_email }}">
 <input type="hidden" name="lc" value="CA">
+<input type="hidden" value="Donation to {{ page.name }}" name="item_name">
 <input type="hidden" name="no_note" value="0">
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
 </form>
 
 <p />
