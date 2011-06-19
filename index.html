@@ -1,41 +1,50 @@
 ---
 layout: default
 title: Free Your Self
+
+name: Jonathan "Duke" Leto
 email: jonathan@leto.net
 location: Portland, OR
+
+default_donation: 5
+default_currency: USD
+
 dwolla_account_id: 812-529-3608
 dwolla_memo: Here is a donation for your valuable work.
-dwolla_amount: 5
 dwolla_repeat_donation: 1
+
 bitcoin_address: 15pwvXdXo8XxJbQhG41d9xtDmr2UoCXoPP
+
 paypal_email: jaleto@gmail.com
 
 google_merchant_id: 42
 ---
 
-Ways To Donate<br/>
+Ways To Donate
+<p />
 
-<a href=”http://www.dwolla.com/u/{{ page.dwolla_account_id }}?amount={{ page.dwolla_amount }}&repeats={{ page.dwolla_repeat_donation }}&repeat=3&action=send”><img title=”Dwolla” src=”http://www.dwolla.org/id/dwolla_170a.png” width=”170″ height=”59″ border=”0″ /></a>
+<a href="http://www.dwolla.com/u/{{ page.dwolla_account_id }}?amount={{ page.default_donation }}&repeats={{ page.dwolla_repeat_donation }}&repeat=3&action=send&memo={{ page.dwolla_memo }}"> <img title="Dwolla" src="images/dwolla.png" width="170" height="59" border="0" /></a>
 <br/>
 
 <br />
 
 <!-- PayPal -->
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="radio" name="payby" value="paypal_x" /><img style="vertical-align: middle" alt="PayPal" title="PayPal" src="https://www.paypal.com/en_US/i/logo/PayPal_mark_60x38.gif" />
+<img style="vertical-align: middle" alt="PayPal" title="PayPal" src="https://www.paypal.com/en_US/i/logo/PayPal_mark_60x38.gif" />
 <input type="hidden" name="cmd" value="_donations">
 <input type="hidden" name="business" value="{{ page.paypal_email }}">
 <input type="hidden" name="lc" value="CA">
+<input type="hidden" name="amount" value="{{ page.default_donation }}">
+<input type="hidden" value="Donation to {{ page.name }}" name="item_name">
 <input type="hidden" name="no_note" value="0">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal">
+<input type="hidden" name="currency_code" value="{{ page.default_currency }}">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
 </form>
 
 <p />
 
-
 <!-- Amazon Payments -->
 <form action="" method="post">
-<input type="radio" checked="checked" name="payby" value="amazon_x" /><img style="vertical-align: middle" title="Amazon Payments" alt="Amazon Payments" src="http://g-ecx.images-amazon.com/images/G/01/cba/b/p3.gif" /> Use the same account you use when you buy from Amazon
+<img style="vertical-align: middle" title="Amazon Payments" alt="Amazon Payments" src="http://g-ecx.images-amazon.com/images/G/01/cba/b/p3.gif" /> Use the same account you use when you buy from Amazon
 </form>
