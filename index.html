@@ -21,6 +21,8 @@ bitcoin_address: 15pwvXdXo8XxJbQhG41d9xtDmr2UoCXoPP
 paypal_email: jaleto@gmail.com
 
 google_merchant_id: 42
+
+pledgie_campaign_id: 42
 ---
 
 Ways To Donate
@@ -28,6 +30,9 @@ Ways To Donate
 
 <a href="http://www.dwolla.com/u/{{ page.dwolla_account_id }}?amount={{ page.default_donation }}&repeats={{ page.dwolla_repeat_donation }}&repeat=3&action=send&memo={{ page.dwolla_memo }}"> <img title="Dwolla" src="images/dwolla.png" width="170" height="59" border="0" /></a>
 <br/>
+
+<a href='http://www.pledgie.com/campaigns/{{ page.pledgie_campaign_id }}'>
+<img alt="Click here to donate to {{ page.name }}" src='http://www.pledgie.com/campaigns/{{ page.pledgie_campaign_id }}.png?skin_name=chrome' border='0' /></a>
 
 <br />
 
