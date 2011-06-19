@@ -2,12 +2,15 @@
 layout: default
 title: Free Your Self
 
-name: Jonathan "Duke" Leto
+name: Jonathan \"Duke\" Leto
 email: jonathan@leto.net
 location: Portland, OR
 
 default_donation: 5
 default_currency: USD
+donation_url: http://leto.github.com/freeyourself
+
+amazon_payments_account_id: 42
 
 dwolla_account_id: 812-529-3608
 dwolla_memo: Here is a donation for your valuable work.
@@ -43,6 +46,21 @@ Ways To Donate
 <p />
 
 <!-- Amazon Payments -->
-<form action="" method="post">
+<form action="https://authorize.payments.amazon.com/pba/paypipeline" method="post">
 <img style="vertical-align: middle" title="Amazon Payments" alt="Amazon Payments" src="http://g-ecx.images-amazon.com/images/G/01/cba/b/p3.gif" /> Use the same account you use when you buy from Amazon
+<input type="text" name="amount" size="6" value="20">
+
+<input class="donate-btn" type="image" src="http://g-ecx.images-amazon.com/images/G/01/asp/golden_small_donate_withmsg_whitebg.gif">
+<input type="hidden" name="immediateReturn" value="1">
+<input type="hidden" name="collectShippingAddress" value="0">
+
+<input type="hidden" name="minimumDonationAmount" value="USD 5">
+<input type="hidden" name="isDonationWidget" value="1">
+<input type="hidden" name="description" value="A donation for {{ page.name }}">
+<input type="hidden" name="amazonPaymentsAccountId" value="{{ page.amazon_payments_account_id }}">
+<input type="hidden" name="returnUrl" value="{{ page.donation_url }}">
+<input type="hidden" name="processImmediate" value="1">
+<input type="hidden" name="cobrandingStyle" value="logo">
+<input type="hidden" name="abandonUrl" value="{{ page.donation_url }}">
+
 </form>
