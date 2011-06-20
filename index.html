@@ -2,50 +2,33 @@
 layout: default
 title: Free Your Self
 
-name: Jonathan \"Duke\" Leto
-email: jonathan@leto.net
-location: Portland, OR
-
-default_donation: 5
-default_currency: USD
-donation_url: http://leto.github.com/freeyourself
-
-amazon_payments_account_id: 42
-
-dwolla_account_id: 812-529-3608
-dwolla_memo: Here is a donation for your valuable work.
-dwolla_repeat_donation: 1
-
-bitcoin_address: 15pwvXdXo8XxJbQhG41d9xtDmr2UoCXoPP
-
-paypal_email: jaleto@gmail.com
-
-google_merchant_id: 42
-
-pledgie_campaign_id: 42
 ---
 
 Ways To Donate
 <p />
 
-<a href="http://www.dwolla.com/u/{{ page.dwolla_account_id }}?amount={{ page.default_donation }}&repeats={{ page.dwolla_repeat_donation }}&repeat=3&action=send&memo={{ page.dwolla_memo }}"> <img title="Dwolla" src="images/dwolla.png" width="170" height="59" border="0" /></a>
+<a href="http://www.dwolla.com/u/{{ dwolla_account_id }}?amount={{ default_donation }}&repeats={{ dwolla_repeat_donation }}&repeat=3&action=send&memo={{ dwolla_memo }}"> <img title="Dwolla" src="images/dwolla.png" width="170" height="59" border="0" /></a>
 <br/>
 
-<a href='http://www.pledgie.com/campaigns/{{ page.pledgie_campaign_id }}'>
-<img alt="Click here to donate to {{ page.name }}" src='http://www.pledgie.com/campaigns/{{ page.pledgie_campaign_id }}.png?skin_name=chrome' border='0' /></a>
+<a href='http://www.pledgie.com/campaigns/{{ pledgie_campaign_id }}'>
+<img alt="Click here to donate to {{ name }}" src='http://www.pledgie.com/campaigns/{{ pledgie_campaign_id }}.png?skin_name=chrome' border='0' /></a>
 
 <br />
+
+<img style="" alt="Flattr This!" src="https://api.flattr.com/button/flattr-badge-large.png">
+
+<br/>
 
 <!-- PayPal -->
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <img style="vertical-align: middle" alt="PayPal" title="PayPal" src="https://www.paypal.com/en_US/i/logo/PayPal_mark_60x38.gif" />
 <input type="hidden" name="cmd" value="_donations">
-<input type="hidden" name="business" value="{{ page.paypal_email }}">
+<input type="hidden" name="business" value="{{ paypal_email }}">
 <input type="hidden" name="lc" value="CA">
-<input type="hidden" name="amount" value="{{ page.default_donation }}">
-<input type="hidden" value="Donation to {{ page.name }}" name="item_name">
+<input type="hidden" name="amount" value="{{ default_donation }}">
+<input type="hidden" value="Donation to {{ name }}" name="item_name">
 <input type="hidden" name="no_note" value="0">
-<input type="hidden" name="currency_code" value="{{ page.default_currency }}">
+<input type="hidden" name="currency_code" value="{{ default_currency }}">
 <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
 </form>
@@ -63,11 +46,11 @@ Ways To Donate
 
 <input type="hidden" name="minimumDonationAmount" value="USD 5">
 <input type="hidden" name="isDonationWidget" value="1">
-<input type="hidden" name="description" value="A donation for {{ page.name }}">
-<input type="hidden" name="amazonPaymentsAccountId" value="{{ page.amazon_payments_account_id }}">
-<input type="hidden" name="returnUrl" value="{{ page.donation_url }}">
+<input type="hidden" name="description" value="A donation for {{ name }}">
+<input type="hidden" name="amazonPaymentsAccountId" value="{{ amazon_payments_account_id }}">
+<input type="hidden" name="returnUrl" value="{{ donation_url }}">
 <input type="hidden" name="processImmediate" value="1">
 <input type="hidden" name="cobrandingStyle" value="logo">
-<input type="hidden" name="abandonUrl" value="{{ page.donation_url }}">
+<input type="hidden" name="abandonUrl" value="{{ donation_url }}">
 
 </form>
