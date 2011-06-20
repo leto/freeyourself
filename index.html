@@ -12,7 +12,7 @@ Ways To Donate
 
 {% if site.pledgie_campaign_id %}
 <a href='http://www.pledgie.com/campaigns/{{ site.pledgie_campaign_id }}'>
-<img alt="Click here to donate to {{ site.name }}" src='http://www.pledgie.com/campaigns/{{ site.pledgie_campaign_id }}.png?skin_name=chrome' border='0' /></a>
+<img alt="Click here to donate to {{ site.name  | escape }}" src='http://www.pledgie.com/campaigns/{{ site.pledgie_campaign_id }}.png?skin_name=chrome' border='0' /></a>
 {% endif %}
 
 <br />
@@ -30,7 +30,7 @@ Ways To Donate
 <input type="hidden" name="business" value="{{ site.paypal_email }}">
 <input type="hidden" name="lc" value="CA">
 <input type="hidden" name="amount" value="{{ site.default_donation }}">
-<input type="hidden" value="Donation to {{ site.name }}" name="item_name">
+<input type="hidden" value="Donation to {{ site.name | escape }}" name="item_name">
 <input type="hidden" name="no_note" value="0">
 <input type="hidden" name="currency_code" value="{{ site.default_currency }}">
 <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
@@ -50,7 +50,7 @@ Ways To Donate
 
 <input type="hidden" name="minimumDonationAmount" value="USD 5">
 <input type="hidden" name="isDonationWidget" value="1">
-<input type="hidden" name="description" value="A donation for {{ site.name }}">
+<input type="hidden" name="description" value="A donation for {{ site.name | escape }}">
 <input type="hidden" name="amazonPaymentsAccountId" value="{{ site.amazon_payments_account_id }}">
 <input type="hidden" name="returnUrl" value="{{ site.donation_url }}">
 <input type="hidden" name="processImmediate" value="1">
