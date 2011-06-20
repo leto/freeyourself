@@ -10,8 +10,10 @@ Ways To Donate
 <a href="http://www.dwolla.com/u/{{ site.dwolla_account_id }}?amount={{ site.default_donation }}&repeats={{ site.dwolla_repeat_donation }}&repeat=3&action=send&memo={{ site.dwolla_memo }}"> <img title="Dwolla" src="images/dwolla.png" width="170" height="59" border="0" /></a>
 <br/>
 
+{% if site.pledgie_campaign_id %}
 <a href='http://www.pledgie.com/campaigns/{{ site.pledgie_campaign_id }}'>
 <img alt="Click here to donate to {{ site.name }}" src='http://www.pledgie.com/campaigns/{{ site.pledgie_campaign_id }}.png?skin_name=chrome' border='0' /></a>
+{% endif %}
 
 <br />
 
