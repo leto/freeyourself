@@ -41,10 +41,9 @@ Ways To Donate
 
 <!-- Amazon Payments -->
 <form action="https://authorize.payments.amazon.com/pba/paypipeline" method="post">
-<img style="vertical-align: middle" title="Amazon Payments" alt="Amazon Payments" src="http://g-ecx.images-amazon.com/images/G/01/cba/b/p3.gif" /> Use the same account you use when you buy from Amazon
-<input type="text" name="amount" size="6" value="20">
+<input type="text" name="amount" size="6" value="{{ site.default_donation }}">
 
-<input class="donate-btn" type="image" src="http://g-ecx.images-amazon.com/images/G/01/asp/golden_small_donate_withmsg_whitebg.gif">
+<input class="donate-btn" type="image" src="http://g-ecx.images-amazon.com/images/G/01/asp/golden_small_donate_withmsg_whitebg.gif" alt="Amazon Payments">
 <input type="hidden" name="immediateReturn" value="1">
 <input type="hidden" name="collectShippingAddress" value="0">
 
