@@ -34,7 +34,6 @@ Bitcoin <b>{{ site.bitcoin_address }}</b>
 {% if site.paypal_email %}
 <!-- PayPal -->
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<img style="vertical-align: middle" alt="PayPal" title="PayPal" src="https://www.paypal.com/en_US/i/logo/PayPal_mark_60x38.gif" />
 <input type="hidden" name="cmd" value="_donations">
 <input type="hidden" name="business" value="{{ site.paypal_email }}">
 <input type="hidden" name="lc" value="CA">
@@ -43,7 +42,7 @@ Bitcoin <b>{{ site.bitcoin_address }}</b>
 <input type="hidden" name="no_note" value="0">
 <input type="hidden" name="currency_code" value="{{ site.default_currency }}">
 <input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal">
+<input type="image" src="https://www.paypal.com/en_US/i/logo/PayPal_mark_60x38.gif" border="0" name="submit" alt="PayPal">
 </form>
 <br/>
 {% endif %}
