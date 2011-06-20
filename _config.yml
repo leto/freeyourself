@@ -4,6 +4,9 @@ pygments: true
 name: Jonathan \"Duke\" Leto
 email: jonathan@leto.net
 location: Portland, OR
+github: leto
+identica: leto
+twitter: dukeleto
 
 default_donation: 5
 default_currency: USD
@@ -22,3 +25,8 @@ paypal_email: jaleto@gmail.com
 google_merchant_id: 42
 
 pledgie_campaign_id:
+
+flattr_username:
+
+google_analytics:
+

@@ -26,19 +26,21 @@
   <div class="footer">
     <div class="contact">
       <p>
-        Jonathan "Duke" Leto <br />
-        Founder of <a href="http://letolabs.github.com">Leto Labs LLC</a><br />
-        jonathan@leto.net<br />
+        {{ site.name }}<br />
+        {{ site.email }}<br />
       </p>
     </div>
     <div class="contact">
       <p>
-        <a href="http://leto.net">Interwebs: leto.net</a><br />
-        <a href="http://github.com/leto/">Github: leto</a><br />
-        <a href="http://twitter.com/dukeleto">Twitter: dukeleto</a><br />
-        <a href="http://identi.ca/leto">Identi.ca: leto</a><br />
-        <a href="http://linkedin.leto.net">LinkedIn</a><br />
-        <a href="http://ohloh.leto.net">Ohloh</a><br />
+      {% if site.github %}
+        <a href="http://github.com/{{ site.github }}/">Github: {{ site.github }}</a><br />
+        {% endif %}
+      {% if site.twitter %}
+        <a href="http://twitter.com/{{ site.twitter }}">Twitter: {{ site.twitter }}</a><br />
+        {% endif %}
+      {% if site.identica %}
+        <a href="http://identi.ca/{{ site.identica }}">Identi.ca: {{ site.identica }}</a><br />
+        {% endif %}
       </p>
     </div>
     <div class="rss">
@@ -50,7 +52,7 @@
   </div>
 </div>
 
-<a href="http://github.com/letolabs/letolabs.github.com"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+<a href="http://github.com/leto/freeyourself"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
 
 <!--
 <script type="text/javascript">
