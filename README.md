@@ -1,8 +1,9 @@
 # Free Your Self
 
-Free Your Self is a simple static website that FLOSS developers can customize
-and use to receive donations for their work. It supports many different
-ways to receive donations. Currently these methods are supported:
+Free Your Self is a simple static website that FLOSS developers and content
+creators can customize and use to receive donations for their work. It supports
+many different ways to receive donations. Currently these methods are
+supported:
 
 * Bitcoin
 * Dwolla
@@ -31,6 +32,14 @@ Free Your Self aims to fix this problem by providing a dead-simple, easy-to-cust
 website, which can be hosted for *free* (as in beer), that makes it easy to tell
 the world what you do.
 
+Free Your Self is geared towards developers, but anybody can use it. Some examples
+of other kinds of folks that might like to use Free Your Self:
+
+* Indymedia reporters
+* Graphic designers
+* Web comic creators
+* Nerdy musicians
+* Anybody who makes the world a better place by giving out their creations for free.
 
 # How To Deploy Free Your Self
 
@@ -47,12 +56,18 @@ that you configure will show up on your Free Your Self website.
 It will take about 10 minutes for it to show up the first time, but after that the website
 will be updated within a few seconds after each push.
 
+This is obviously geared towards FLOSS developers that are comfortable with
+these kinds of things.  A simpler way to setup Free Your Self is in the works.
+If you have ideas, let us know!
+
 # How To Use Free Your Self
 
 Basically, just tell people about it! But here are some ideas to get your creative juices
 flowing:
 
 * Add a link to the documentation of your project
+* Add a link to your email signature
+* Write a blog post about why you are so awesome why people should donate to you
 * Occasionally send an update to your favorite microblogging service describing how people
 can send you donations
 * Create a QR code which is a link to your donation page. Then you can print it out, make
