@@ -1,39 +1,69 @@
 ---
 layout: default
 title: Free Your Self
-email: jonathan@leto.net
-location: Portland, OR
-dwolla_account_id: 812-529-3608
-dwolla_memo: Here is a donation for your valuable work.
-dwolla_amount: 5
-dwolla_repeat_donation: 1
-bitcoin_address: 15pwvXdXo8XxJbQhG41d9xtDmr2UoCXoPP
-paypal_email: jaleto@gmail.com
+
 ---
 
-Ways To Donate<br/>
-
-<a href=”http://www.dwolla.com/u/{{ page.dwolla_account_id }}?amount={{ page.dwolla_amount }}&repeats={{ page.dwolla_repeat_donation }}&repeat=3&action=send”><img title=”Dwolla” src=”http://www.dwolla.org/id/dwolla_170a.png” width=”170″ height=”59″ border=”0″ /></a>
-<br/>
+<h1>Ways To Donate</h1>
 
 <br />
 
+{% if site.bitcoin_address %}
+Bitcoin <b>{{ site.bitcoin_address }}</b>
+<br/>
+{% endif %}
+
+{% if site.dwolla_account_id %}
+<a href="http://www.dwolla.com/u/{{ site.dwolla_account_id }}?amount={{ site.default_donation }}&repeats={{ site.dwolla_repeat_donation }}&repeat=3&action=send&memo={{ site.dwolla_memo }}"> <img title="Dwolla" src="images/dwolla.png" width="170" height="59" border="0" /></a>
+<br/>
+{% endif %}
+
+{% if site.pledgie_campaign_id %}
+<a href='http://www.pledgie.com/campaigns/{{ site.pledgie_campaign_id }}'>
+<img alt="Click here to donate to {{ site.name  | escape }}" src='http://www.pledgie.com/campaigns/{{ site.pledgie_campaign_id }}.png?skin_name=chrome' border='0' /></a>
+<br />
+{% endif %}
+
+
+{% if site.flattr_username %}
+<img style="" alt="Flattr This!" src="https://api.flattr.com/button/flattr-badge-large.png">
+<br/>
+{% endif %}
+
+
+{% if site.paypal_email %}
 <!-- PayPal -->
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="radio" name="payby" value="paypal_x" /><img style="vertical-align: middle" alt="PayPal" title="PayPal" src="https://www.paypal.com/en_US/i/logo/PayPal_mark_60x38.gif" />
 <input type="hidden" name="cmd" value="_donations">
-<input type="hidden" name="business" value="{{ page.paypal_email }}">
+<input type="hidden" name="business" value="{{ site.paypal_email }}">
 <input type="hidden" name="lc" value="CA">
+<input type="hidden" name="amount" value="{{ site.default_donation }}">
+<input type="hidden" value="Donation to {{ site.name | escape }}" name="item_name">
 <input type="hidden" name="no_note" value="0">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal">
+<input type="hidden" name="currency_code" value="{{ site.default_currency }}">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.paypal.com/en_US/i/logo/PayPal_mark_60x38.gif" border="0" name="submit" alt="PayPal">
 </form>
+<br/>
+{% endif %}
 
-<p />
-
-
+{% if site.amazon_payments_account_id %}
 <!-- Amazon Payments -->
-<form action="" method="post">
-<input type="radio" checked="checked" name="payby" value="amazon_x" /><img style="vertical-align: middle" title="Amazon Payments" alt="Amazon Payments" src="http://g-ecx.images-amazon.com/images/G/01/cba/b/p3.gif" /> Use the same account you use when you buy from Amazon
+<form action="https://authorize.payments.amazon.com/pba/paypipeline" method="post">
+<input type="text" name="amount" size="6" value="{{ site.default_donation }}">
+
+<input class="donate-btn" type="image" src="http://g-ecx.images-amazon.com/images/G/01/asp/golden_small_donate_withmsg_whitebg.gif" alt="Amazon Payments">
+<input type="hidden" name="immediateReturn" value="1">
+<input type="hidden" name="collectShippingAddress" value="0">
+
+<input type="hidden" name="minimumDonationAmount" value="USD 5">
+<input type="hidden" name="isDonationWidget" value="1">
+<input type="hidden" name="description" value="A donation for {{ site.name | escape }}">
+<input type="hidden" name="amazonPaymentsAccountId" value="{{ site.amazon_payments_account_id }}">
+<input type="hidden" name="returnUrl" value="{{ site.donation_url }}">
+<input type="hidden" name="processImmediate" value="1">
+<input type="hidden" name="cobrandingStyle" value="logo">
+<input type="hidden" name="abandonUrl" value="{{ site.donation_url }}">
 </form>
+<br/>
+{% endif %}

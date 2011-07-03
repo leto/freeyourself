@@ -1,15 +1,18 @@
 markdown: rdiscount
 pygments: true
 
-name: Jonathan \"Duke\" Leto
+name: Jonathan "Duke" Leto
 email: jonathan@leto.net
 location: Portland, OR
+github: leto
+identica: leto
+twitter: dukeleto
 
 default_donation: 5
 default_currency: USD
 donation_url: http://leto.github.com/freeyourself
 
-amazon_payments_account_id: 42
+amazon_payments_account_id:
 
 dwolla_account_id: 812-529-3608
 dwolla_memo: Here is a donation for your valuable work.
@@ -19,6 +22,11 @@ bitcoin_address: 15pwvXdXo8XxJbQhG41d9xtDmr2UoCXoPP
 
 paypal_email: jaleto@gmail.com
 
-google_merchant_id: 42
+google_merchant_id:
 
-pledgie_campaign_id: 42
+pledgie_campaign_id:
+
+flattr_username:
+
+google_analytics:
+
