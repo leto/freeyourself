@@ -79,3 +79,8 @@ Free Your Self was inspired by Ingy's website http://free.ingy.net . I
 immediately realized that many, many people could benefit from something like
 that, but I wanted to make it dead-simple to receive donations as well as
 being easily configurable.
+
+# License
+
+Free Your Self is GPLv3 software, a version of the license can be found in the
+LICENSE file.
