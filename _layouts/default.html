@@ -41,6 +41,12 @@
       {% if site.identica %}
         <a href="http://identi.ca/{{ site.identica }}">Identi.ca: {{ site.identica }}</a><br />
         {% endif %}
+      {% if site.linkedin_url %}
+        <a href="http://{{ site.linkedin_url }}">LinkedIn: {{ site.linkedin_url }}</a><br />
+        {% endif %}
+      {% if site.ohloh_url %}
+        <a href="http:///{{ site.ohloh_url }}">Ohloh: {{ site.ohloh_url }}</a><br />
+        {% endif %}
       </p>
     </div>
     <div class="rss">
