@@ -23,6 +23,16 @@ Here are some projects that I hack on:
 <li><a href="https://github.com/leto/freeyourself">Free Your Self</a> - The software that runs this site!</li>
 </ul>
 
+<p>
+{% if site.ohloh_account_id %}
+
+<a href='http://www.ohloh.net/accounts/{{ site.ohloh_account_id}}?ref=Detailed' >
+  <img alt='Ohloh profile' height='35' src='http://www.ohloh.net/accounts/{{ site.ohloh_account_id }}/widgets/account_detailed.gif' width='191' border='0'/>
+  </a>
+
+{% endif %}
+</p>
+
 If you want to support the development of any of these projects, then I would greatly appreciate a donation:
 
 <h1>Ways To Donate</h1>
