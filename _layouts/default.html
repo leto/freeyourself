@@ -36,7 +36,8 @@
         <a href="http://github.com/{{ site.github }}/">Github: {{ site.github }}</a><br />
         {% endif %}
       {% if site.twitter %}
-        <a href="http://twitter.com/{{ site.twitter }}">Twitter: {{ site.twitter }}</a><br />
+      <a href="http://twitter.com/{{ site.twitter }}" class="twitter-follow-button">@{{ site.twitter }}</a>
+      <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
         {% endif %}
       {% if site.identica %}
         <a href="http://identi.ca/{{ site.identica }}">Identi.ca: {{ site.identica }}</a><br />
