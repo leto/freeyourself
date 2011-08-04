@@ -27,6 +27,11 @@
     <div class="contact">
       <p>
         {{ site.name }}<br />
+
+        {% if site.tagline %}
+        {{ site.tagline }}<br />
+        {% endif %}
+
         {{ site.email }}<br />
       </p>
     </div>
@@ -37,7 +42,7 @@
         {% endif %}
       {% if site.twitter %}
       <a href="http://twitter.com/{{ site.twitter }}" class="twitter-follow-button">@{{ site.twitter }}</a>
-      <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+      <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script> <br/>
         {% endif %}
       {% if site.identica %}
         <a href="http://identi.ca/{{ site.identica }}">Identi.ca: {{ site.identica }}</a><br />
@@ -47,6 +52,9 @@
         {% endif %}
       {% if site.ohloh_url %}
         <a href="{{ site.ohloh_url }}">Ohloh</a><br />
+        {% endif %}
+      {% if site.coderwall_username %}
+        <a href="http://coderwall.com/{{ site.coderwall_username }}">Coderwall</a><br />
         {% endif %}
       </p>
     </div>
